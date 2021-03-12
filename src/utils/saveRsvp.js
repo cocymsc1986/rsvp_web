@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const saveRsvp = async (values) => {
   try {
-    const url = 'http://test.com';
+    const url = process.env.REACT_APP_API_URL;
 
     await axios.post(url, values);
 
