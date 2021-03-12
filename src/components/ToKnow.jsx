@@ -1,10 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const Wrapper = styled.div`
+  margin-bottom: 7rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5rem;
+  }
+`;
+
 const StyledFlexContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   text-align: left;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 
   > * {
     flex: 1;
@@ -12,10 +24,20 @@ const StyledFlexContainer = styled.div`
 
     &:first-child {
       text-align: right;
+
+      @media (max-width: 768px) {
+        text-align: center;
+        margin-bottom: 5rem;
+      }
     }
 
     &:last-child {
       border-left: 1px solid black;
+
+      @media (max-width: 768px) {
+        border-left: none;
+        text-align: center;
+      }
     }
   }
 `;
@@ -32,7 +54,7 @@ const StyledListItem = styled.li`
 
 export const ToKnow = () => {
   return (
-    <>
+    <Wrapper>
       <StyledFlexContainer>
         <div>
           <h2>Helpful info</h2>
@@ -53,12 +75,12 @@ export const ToKnow = () => {
               Finikoudes or Mackenzie Beach - Hotels and AirBnBs near the beach
             </StyledListItem>
             <StyledListItem>
-              Pervolia - Ideal for villas, next to beaches that are less popular
-              with less facilities
+              Perivolia - Ideal for villas, slightly further out but near to
+              beaches that are quieter with less facilities
             </StyledListItem>
           </StyledList>
         </div>
       </StyledFlexContainer>
-    </>
+    </Wrapper>
   );
 };
