@@ -49,7 +49,7 @@ const Pointer = () => {
 export const LocationMap = () => {
   return (
     <GoogleMap
-      bootstrapURLKeys={{ key: 'AIzaSyAxbI1sbuEq6u-twxC7PyNUPpeqp-29OD0' }}
+      bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
       defaultCenter={{ lat: 34.890548141034394, lng: 33.63668879572238 }}
       defaultZoom={16}
     >
