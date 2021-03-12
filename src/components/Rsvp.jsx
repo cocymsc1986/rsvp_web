@@ -126,6 +126,12 @@ export const Rsvp = () => {
       if (success) {
         setError(false);
         setSubmitted(true);
+        setValues({
+          name: '',
+          people: '',
+          diet: '',
+          song: '',
+        });
       }
       return;
     }
