@@ -1,16 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react"
+import styled from "styled-components"
 
 const StyledFooter = styled.footer`
-  font-size: 3rem;
   font-weight: bold;
-  margin: 10rem auto 14rem;
-`;
+  margin: 14rem auto;
+`
 
 export const Footer = () => {
   return (
     <>
-      <StyledFooter>We look forward to seeing you there!</StyledFooter>
+      <StyledFooter>
+        <h1>We look forward to seeing you there!</h1>
+      </StyledFooter>
     </>
-  );
-};
+  )
+}

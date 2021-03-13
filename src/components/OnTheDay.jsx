@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react"
+import styled from "styled-components"
 
-import { LocationMap } from './LocationMap';
+import { LocationMap } from "./LocationMap"
 
 const Wrapper = styled.div`
   margin-bottom: 7rem;
@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   @media (max-width: 768px) {
     margin-bottom: 5rem;
   }
-`;
+`
 
 const StyledMapContainer = styled.div`
   width: 100vw;
@@ -17,16 +17,16 @@ const StyledMapContainer = styled.div`
   position: absolute;
   transform: translateX(50%);
   left: -50%;
-`;
+`
 
 const StyledContent = styled.div`
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin-bottom: 5rem;
-`;
+`
 
 const MapHeightDummyComponent = styled.div`
   height: 400px;
-`;
+`
 
 export const OnTheDay = () => {
   return (
@@ -46,5 +46,5 @@ export const OnTheDay = () => {
       </StyledMapContainer>
       <MapHeightDummyComponent />
     </Wrapper>
-  );
-};
+  )
+}

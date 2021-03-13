@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react"
 
-import GoogleMap from 'google-map-react';
-import styled from 'styled-components';
+import GoogleMap from "google-map-react"
+import styled from "styled-components"
 
 const StyledPointer = styled.div`
   width: 0;
@@ -10,7 +10,7 @@ const StyledPointer = styled.div`
   border-right: 15px solid transparent;
   border-top: 30px solid black;
   z-index: 999;
-`;
+`
 
 const StyledLocationInfo = styled.div`
   margin-top: -4rem;
@@ -19,7 +19,7 @@ const StyledLocationInfo = styled.div`
   background: white;
   padding: 2rem;
   width: 15rem;
-`;
+`
 
 const StyledLocationInfoItem = styled.span`
   display: block;
@@ -30,21 +30,19 @@ const StyledLocationInfoItem = styled.span`
     font-weight: bold;
     font-size: 1.6rem;
   }
-`;
+`
 
 const Pointer = () => {
   return (
     <StyledPointer data-testid="map-pointer">
       <StyledLocationInfo>
-        <StyledLocationInfoItem>
-          Mackenzie beach car park
-        </StyledLocationInfoItem>
+        <StyledLocationInfoItem>Mackenzie beach car park</StyledLocationInfoItem>
         <StyledLocationInfoItem>Mackenzie Beach</StyledLocationInfoItem>
         <StyledLocationInfoItem>Larnaca 6027</StyledLocationInfoItem>
       </StyledLocationInfo>
     </StyledPointer>
-  );
-};
+  )
+}
 
 export const LocationMap = () => {
   return (
@@ -55,5 +53,5 @@ export const LocationMap = () => {
     >
       <Pointer lat={34.89054814103439} lng={33.63626879562218} />
     </GoogleMap>
-  );
-};
+  )
+}

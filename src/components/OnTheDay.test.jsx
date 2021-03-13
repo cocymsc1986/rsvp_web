@@ -1,16 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import { OnTheDay } from './OnTheDay';
+import { render, screen } from "@testing-library/react"
+import { OnTheDay } from "./OnTheDay"
 
-describe('OnTheDay component', () => {
-  it('should render', () => {
-    render(<OnTheDay />);
+describe("OnTheDay component", () => {
+  it("should render", () => {
+    render(<OnTheDay />)
 
-    expect(screen.getByText('On the Big Day')).toBeInTheDocument();
-  });
+    expect(screen.getByText("On the Big Day")).toBeInTheDocument()
+  })
 
-  it('should contain map component', () => {
-    render(<OnTheDay />);
+  it("should contain map component", () => {
+    render(<OnTheDay />)
 
-    expect(screen.getByTestId('map-component')).toBeInTheDocument();
-  });
-});
+    expect(screen.getByTestId("map-component")).toBeInTheDocument()
+  })
+})

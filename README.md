@@ -6,10 +6,11 @@ in at REACT_APP_API_URL
 # Run
 
 ### Run `yarn` then `yarn start` to run
+
 App is built on create react app
 
 # Tests
 
 ### Run tests by running `yarn test`
-Tests are built on Jest and React Testing Library
 
+Tests are built on Jest and React Testing Library

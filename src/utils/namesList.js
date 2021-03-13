@@ -1,1 +1,1 @@
-export const namesList = ['Cockcroft', 'Boucouvalas'];
+export const namesList = ["Cockcroft", "Boucouvalas"]

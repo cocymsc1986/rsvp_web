@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Didot";
-  src: url("./assets/Didot_Regular.ttf") format("ttf"),
+  src: url("./assets/Didot_Regular.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "Mulish";
-  src: url("./assets/Mulish_Regular.ttf") format("ttf"),
+  src: url("./assets/Mulish_Regular.ttf") format("ttf");
 }
 
 html {
-  font-size: 10px
+  font-size: 10px;
 }
 
 body {
   margin: 0;
-  font-family: 'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Mulish", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,6 +23,10 @@ body {
   font-weight: 200;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Didot'
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Didot";
 }

@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Rsvp } from './Rsvp';
+import React from "react"
+import styled from "styled-components"
+import { Rsvp } from "./Rsvp"
 
-import headerImg from '../assets/header.png';
+import headerImg from "../assets/header.png"
 
 const HeaderImage = styled.img`
   max-width: 800px;
   width: 100%;
-`;
+`
 
 export const Header = () => {
   return (
@@ -17,5 +17,5 @@ export const Header = () => {
       </header>
       <Rsvp />
     </>
-  );
-};
+  )
+}
