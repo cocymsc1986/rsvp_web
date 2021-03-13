@@ -1,10 +1,10 @@
-import './App.css';
+import "./App.css"
 
-import { Header } from './components/Header';
-import { ToKnow } from './components/ToKnow';
-import { BeforeTheDay } from './components/BeforeTheDay';
-import { OnTheDay } from './components/OnTheDay';
-import { Footer } from './components/Footer';
+import { Header } from "./components/Header"
+import { ToKnow } from "./components/ToKnow"
+import { BeforeTheDay } from "./components/BeforeTheDay"
+import { OnTheDay } from "./components/OnTheDay"
+import { Footer } from "./components/Footer"
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <OnTheDay />
       <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

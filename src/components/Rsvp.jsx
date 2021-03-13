@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react"
+import styled from "styled-components"
 
-import { saveRsvp } from '../utils/saveRsvp';
-
-import { namesList } from '../utils/namesList';
+import { saveRsvp } from "../utils/saveRsvp"
+import { namesList } from "../utils/namesList"
 
 const Wrapper = styled.div`
   margin-bottom: 7rem;
@@ -11,54 +10,58 @@ const Wrapper = styled.div`
   @media (max-width: 768px) {
     margin-bottom: 5rem;
   }
-`;
+`
 
 const StyledForm = styled.form`
   margin-bottom: 4rem;
-`;
+`
 
 const FormField = styled.div`
-  margin-bottom: 2rem;
-`;
+  margin-bottom: 2.8rem;
+`
 
 const StyledLabel = styled.label`
-  font-family: 'Didot';
+  font-family: "Didot";
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
   font-size: 2.4rem;
   font-weight: bold;
-`;
+`
 
 const StyledInput = styled.input`
-  font-family: 'Didot';
-  padding: 0.6rem;
+  font-family: "Didot";
+  padding: 1rem;
   font-size: 2rem;
   width: 30rem;
-`;
+`
 
 const StyledButton = styled.button`
-  font-family: 'Didot';
+  font-family: "Didot";
   padding: 0.5rem 1.5rem;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: bold;
   background: black;
   color: white;
   border: none;
   cursor: pointer;
-`;
+`
+const StyledInfoText = styled.p`
+  font-size: 2rem;
+  margin-bottom: 4rem;
+`
 
 const StyledSubText = styled.span`
   font-size: 1.6rem;
   font-weight: normal;
-  font-family: 'Mulish';
+  font-family: "Mulish";
   font-weight: 200;
-`;
+`
 
 const StyledError = styled.span`
   margin-top: 0.5rem;
   display: block;
   color: red;
-`;
+`
 
 const ModalOverlay = styled.span`
   height: 100vh;
@@ -68,7 +71,7 @@ const ModalOverlay = styled.span`
   top: 0;
   left: 0;
   z-index: 5;
-`;
+`
 
 const Modal = styled.div`
   font-size: 2.5rem;
@@ -82,75 +85,75 @@ const Modal = styled.div`
   left: 50%;
   transform: translate(-50%);
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.6);
-`;
+`
 
 export const Rsvp = () => {
   const [values, setValues] = useState({
-    name: '',
-    people: '',
-    diet: '',
-    song: '',
-  });
-  const [valid, setValid] = useState(true);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(false);
+    name: "",
+    people: "",
+    diet: "",
+    song: "",
+  })
+  const [valid, setValid] = useState(true)
+  const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
 
   const onChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value } = event.target
 
-    setValues({ ...values, [name]: value });
-  };
+    setValues({ ...values, [name]: value })
+  }
 
   const validateForm = () => {
     if (!values.name) {
-      setValid(false);
-      return false;
+      setValid(false)
+      return false
     }
 
     return namesList.some((name) =>
       values.name.toLowerCase().includes(name.toLowerCase())
-    );
-  };
+    )
+  }
 
   const onSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
-    const isValid = validateForm();
+    const isValid = validateForm()
 
     if (isValid) {
-      setValid(true);
-      const { success, error } = await saveRsvp(values);
+      setValid(true)
+      const { success, error } = await saveRsvp(values)
 
       if (error) {
-        setSubmitted(false);
-        setError(true);
+        setSubmitted(false)
+        setError(true)
       }
 
       if (success) {
-        setError(false);
-        setSubmitted(true);
+        setError(false)
+        setSubmitted(true)
         setValues({
-          name: '',
-          people: '',
-          diet: '',
-          song: '',
-        });
+          name: "",
+          people: "",
+          diet: "",
+          song: "",
+        })
       }
-      return;
+      return
     }
 
-    setSubmitted(false);
-    setError(false);
-    setValid(false);
-  };
+    setSubmitted(false)
+    setError(false)
+    setValid(false)
+  }
 
   return (
     <Wrapper>
       <StyledForm onSubmit={onSubmit}>
         <h1>RSVP</h1>
-        <p>
+        <StyledInfoText>
           We just need one person to respond on behalf of all of your family
-        </p>
+        </StyledInfoText>
         <FormField>
           <StyledLabel htmlFor="name">
             Who?
@@ -174,9 +177,7 @@ export const Rsvp = () => {
           <StyledLabel htmlFor="people">
             Who else is coming with you?
             <br />
-            <StyledSubText>
-              (Separate multiple names with a comma)
-            </StyledSubText>
+            <StyledSubText>(Separate multiple names with a comma)</StyledSubText>
           </StyledLabel>
           <StyledInput
             value={values.people}
@@ -219,12 +220,10 @@ export const Rsvp = () => {
         <ModalOverlay>
           <Modal>
             <p>We have received your RSVP, thank you!</p>
-            <StyledButton onClick={() => setSubmitted(false)}>
-              Close
-            </StyledButton>
+            <StyledButton onClick={() => setSubmitted(false)}>Close</StyledButton>
           </Modal>
         </ModalOverlay>
       )}
     </Wrapper>
-  );
-};
+  )
+}

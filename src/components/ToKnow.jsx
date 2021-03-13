@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react"
+import styled from "styled-components"
 
 const Wrapper = styled.div`
   margin-bottom: 7rem;
@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   @media (max-width: 768px) {
     margin-bottom: 5rem;
   }
-`;
+`
 
 const StyledFlexContainer = styled.div`
   display: flex;
@@ -40,17 +40,17 @@ const StyledFlexContainer = styled.div`
       }
     }
   }
-`;
+`
 
 const StyledList = styled.ul`
-  font-size: 2.4rem;
+  font-size: 2rem;
   list-style: none;
   padding-left: 0;
-`;
+`
 
 const StyledListItem = styled.li`
   margin-bottom: 1rem;
-`;
+`
 
 export const ToKnow = () => {
   return (
@@ -60,9 +60,7 @@ export const ToKnow = () => {
           <h2>Helpful info</h2>
           <StyledList>
             <StyledListItem>Closest airport is Larnaca</StyledListItem>
-            <StyledListItem>
-              Same plugs as the UK, no adaptors needed
-            </StyledListItem>
+            <StyledListItem>Same plugs as the UK, no adaptors needed</StyledListItem>
             <StyledListItem>
               Cars drive on same side of road as UK, easy for car rental
             </StyledListItem>
@@ -75,12 +73,12 @@ export const ToKnow = () => {
               Finikoudes or Mackenzie Beach - Hotels and AirBnBs near the beach
             </StyledListItem>
             <StyledListItem>
-              Perivolia - Ideal for villas, slightly further out but near to
-              beaches that are quieter with less facilities
+              Perivolia - Ideal for villas, slightly further out but near to beaches
+              that are quieter with less facilities
             </StyledListItem>
           </StyledList>
         </div>
       </StyledFlexContainer>
     </Wrapper>
-  );
-};
+  )
+}
