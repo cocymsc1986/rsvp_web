@@ -7,6 +7,10 @@ jest.mock('../utils/saveRsvp', () => ({
   saveRsvp: jest.fn(),
 }));
 
+jest.mock('../utils/namesList', () => ({
+  namesList: ['testName'],
+}));
+
 describe('Rsvp component', () => {
   it('should render', () => {
     render(<Rsvp />);
@@ -36,7 +40,7 @@ describe('Rsvp component', () => {
     render(<Rsvp />);
 
     const nameTextBox = screen.getByLabelText(/Who\?/);
-    userEvent.type(nameTextBox, 'Boucouvalas');
+    userEvent.type(nameTextBox, 'Name TestName');
     userEvent.click(screen.getByText('Send!'));
 
     await waitFor(() =>
@@ -64,7 +68,7 @@ describe('Rsvp component', () => {
     render(<Rsvp />);
 
     const nameTextBox = screen.getByLabelText(/Who\?/);
-    userEvent.type(nameTextBox, 'Boucouvalas');
+    userEvent.type(nameTextBox, 'Name TestName');
     userEvent.click(screen.getByText('Send!'));
 
     await waitFor(() =>
