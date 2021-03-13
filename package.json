@@ -18,6 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "npm run test -- --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "yarn eslint ./src/**/*.{jsx,js}",
     "format": "prettier --write \"./src/**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
