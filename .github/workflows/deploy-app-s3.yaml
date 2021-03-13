@@ -24,8 +24,13 @@ jobs:
         run: npm run lint
       - name: Tests
         run: npm run test:ci
+      - name: create env file
+        run: |
+          touch .env
+          echo REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }} >> .env
+          echo REACT_APP_GOOGLE_MAPS_API_KEY=${{ secrets.REACT_APP_GOOGLE_MAPS_API_KEY }} >> .env
       - name: Build Application
-        run: npm run-script build
+        run: npm run-script build -- ${{ env.AWS_CF_DISTRIBUTION_ID }}
       - uses: jakejarvis/s3-sync-action@master
         name: Upload App to S3 Bucket
         with:
