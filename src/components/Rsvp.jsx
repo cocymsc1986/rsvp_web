@@ -22,6 +22,7 @@ const FormField = styled.div`
 `;
 
 const StyledLabel = styled.label`
+  font-family: 'Didot';
   display: block;
   margin-bottom: 1rem;
   font-size: 2.4rem;
@@ -49,6 +50,8 @@ const StyledButton = styled.button`
 const StyledSubText = styled.span`
   font-size: 1.6rem;
   font-weight: normal;
+  font-family: 'Mulish';
+  font-weight: 200;
 `;
 
 const StyledError = styled.span`
@@ -105,7 +108,7 @@ export const Rsvp = () => {
     }
 
     return namesList.some((name) =>
-      name.toLowerCase().includes(values.name.toLowerCase())
+      values.name.toLowerCase().includes(name.toLowerCase())
     );
   };
 
