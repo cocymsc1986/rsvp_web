@@ -87,6 +87,11 @@ const Modal = styled.div`
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.6);
 `
 
+const StyledDate = styled.p`
+  font-family: "Didot";
+  font-size: 2.6rem;
+`
+
 export const Rsvp = () => {
   const [values, setValues] = useState({
     name: "",
@@ -152,7 +157,9 @@ export const Rsvp = () => {
       <StyledForm onSubmit={onSubmit}>
         <h1>RSVP</h1>
         <StyledInfoText>
-          We just need one person to respond on behalf of all of your family
+          We just need one person to respond on behalf of all of your family by
+          <br />
+          <StyledDate>1st August 2021</StyledDate>
         </StyledInfoText>
         <FormField>
           <StyledLabel htmlFor="name">
