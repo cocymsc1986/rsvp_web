@@ -24,7 +24,6 @@
     "format": "prettier --write \"./src/**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
   },
   "eslintConfig": {
-    "failOnError": false,
     "extends": [
       "react-app",
       "react-app/jest"
