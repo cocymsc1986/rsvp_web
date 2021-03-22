@@ -16,7 +16,6 @@
 	"sourceType": "module"
   },
   "rules": {
-    "no-console": "error",
     "react/react-in-jsx-scope": 0
   },
     "settings": {
