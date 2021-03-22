@@ -35,6 +35,47 @@ const StyledInput = styled.input`
   width: 30rem;
 `
 
+const StyledRadioContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 20rem;
+  margin: 0 auto;
+`
+
+const StyledRadioInputContainer = styled.div`
+  display: flex;
+`
+
+const StyledHiddenRadio = styled.input`
+  opacity: 0;
+  width: 0;
+  height: 0;
+`
+
+const StyledRadioControl = styled.span`
+  position: relative;
+  display: flex;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  border: 0.1em solid currentColor;
+  cursor: pointer;
+
+  &::after {
+    ${({ checked }) => !checked && `display: none`}
+    content: " ";
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    border-radius: 50%;
+    background: black;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+`
+
 const StyledButton = styled.button`
   font-family: "Didot";
   padding: 0.5rem 1.5rem;
@@ -89,6 +130,7 @@ const Modal = styled.div`
 
 export const Rsvp = () => {
   const [values, setValues] = useState({
+    attending: "yes",
     name: "",
     people: "",
     diet: "",
@@ -133,6 +175,7 @@ export const Rsvp = () => {
         setError(false)
         setSubmitted(true)
         setValues({
+          attending: "yes",
           name: "",
           people: "",
           diet: "",
@@ -172,6 +215,41 @@ export const Rsvp = () => {
               Name not recognised, please include your surname
             </StyledError>
           )}
+        </FormField>
+        <FormField>
+          <StyledLabel htmlFor="attending">Will you be attending?</StyledLabel>
+          <StyledRadioContainer>
+            <StyledRadioInputContainer>
+              <label htmlFor="attending-yes">Yes</label>
+              <StyledHiddenRadio
+                onChange={onChange}
+                type="radio"
+                id="attending-yes"
+                name="attending"
+                value="yes"
+                checked={values.attending === "yes"}
+              />
+              <StyledRadioControl
+                onClick={() => setValues({ ...values, attending: "yes" })}
+                checked={values.attending === "yes"}
+              />
+            </StyledRadioInputContainer>
+            <StyledRadioInputContainer>
+              <label htmlFor="attending-no">No</label>
+              <StyledHiddenRadio
+                onChange={onChange}
+                type="radio"
+                id="attending-no"
+                name="attending"
+                value="no"
+                checked={values.attending === "no"}
+              />
+              <StyledRadioControl
+                onClick={() => setValues({ ...values, attending: "no" })}
+                checked={values.attending === "no"}
+              />
+            </StyledRadioInputContainer>
+          </StyledRadioContainer>
         </FormField>
         <FormField>
           <StyledLabel htmlFor="people">
