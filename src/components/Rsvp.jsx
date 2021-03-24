@@ -23,7 +23,6 @@ const FormField = styled.div`
 const StyledLabel = styled.label`
   font-family: "Didot";
   display: block;
-  margin-bottom: 0rem;
   font-size: 2.4rem;
   font-weight: bold;
 `
