@@ -94,8 +94,6 @@ const StyledInfoText = styled.p`
 `
 
 const StyledSubText = styled.p`
-  font-size: 1.6rem;
-  font-family: "Mulish";
   margin: 0 0 1rem;
 `
 
