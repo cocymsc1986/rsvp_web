@@ -23,7 +23,7 @@ const FormField = styled.div`
 const StyledLabel = styled.label`
   font-family: "Didot";
   display: block;
-  margin-bottom: 1.4rem;
+  margin-bottom: 0rem;
   font-size: 2.4rem;
   font-weight: bold;
 `
@@ -33,6 +33,7 @@ const StyledInput = styled.input`
   padding: 1rem;
   font-size: 2rem;
   width: 30rem;
+  margin-top: 1.2rem;
 `
 
 const StyledRadioContainer = styled.div`
@@ -44,6 +45,7 @@ const StyledRadioContainer = styled.div`
 
 const StyledRadioInputContainer = styled.div`
   display: flex;
+  margin-top: 1.2rem;
 `
 
 const StyledHiddenRadio = styled.input`
@@ -59,6 +61,7 @@ const StyledRadioControl = styled.span`
   height: 1.9rem;
   border-radius: 50%;
   border: 0.1em solid currentColor;
+  margin-left: 0.8rem;
   cursor: pointer;
 
   &::after {
@@ -91,11 +94,10 @@ const StyledInfoText = styled.p`
   margin-bottom: 4rem;
 `
 
-const StyledSubText = styled.span`
+const StyledSubText = styled.p`
   font-size: 1.6rem;
-  font-weight: normal;
   font-family: "Mulish";
-  font-weight: 200;
+  margin: 0 0 1rem;
 `
 
 const StyledError = styled.span`
@@ -128,9 +130,9 @@ const Modal = styled.div`
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.6);
 `
 
-const StyledDate = styled.p`
-  font-family: "Didot";
-  font-size: 2.6rem;
+const StyledDate = styled.span`
+  font-size: 2rem;
+  font-weight: bold;
 `
 
 export const Rsvp = () => {
@@ -200,16 +202,12 @@ export const Rsvp = () => {
       <StyledForm onSubmit={onSubmit}>
         <h1>RSVP</h1>
         <StyledInfoText>
-          We just need one person to respond on behalf of all of your family by
-          <br />
+          We just need one person to respond on behalf of all of your family by{" "}
           <StyledDate>1st August 2021</StyledDate>
         </StyledInfoText>
         <FormField>
-          <StyledLabel htmlFor="name">
-            Who?
-            <br />
-            <StyledSubText>(First name and surname)</StyledSubText>
-          </StyledLabel>
+          <StyledLabel htmlFor="name">Who?</StyledLabel>
+          <StyledSubText>(First name and surname)</StyledSubText>
           <StyledInput
             onChange={onChange}
             value={values.name}
@@ -259,11 +257,8 @@ export const Rsvp = () => {
           </StyledRadioContainer>
         </FormField>
         <FormField>
-          <StyledLabel htmlFor="people">
-            Who else is coming with you?
-            <br />
-            <StyledSubText>(Separate multiple names with a comma)</StyledSubText>
-          </StyledLabel>
+          <StyledLabel htmlFor="people">Who else is coming with you?</StyledLabel>
+          <StyledSubText>(Separate multiple names with a comma)</StyledSubText>
           <StyledInput
             value={values.people}
             type="text"
