@@ -5,6 +5,7 @@ export const namesList = [
   "Booth",
   "Jenkinson",
   "Todde-Worth",
+  "Todde Worth",
   "Archer-Todde",
   "Archer Todde",
   "Worth",
@@ -40,4 +41,10 @@ export const namesList = [
   "Dainty",
   "Johnson",
   "Sherman",
+  "White",
+  "Miljevic",
+  "Wallbanks",
+  "Bareham",
+  "Cotton",
+  "Buckley",
 ]
