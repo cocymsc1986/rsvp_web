@@ -30,3 +30,15 @@ h4,
 h5 {
   font-family: "Didot";
 }
+
+a,
+a:active,
+a:visited {
+  color: darkcyan;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

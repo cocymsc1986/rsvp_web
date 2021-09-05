@@ -64,6 +64,7 @@ export const ToKnow = () => {
             <StyledListItem>
               Cars drive on same side of road as UK, easy for car rental
             </StyledListItem>
+            <StyledListItem>Cyprus is 2 hours ahead of UK time</StyledListItem>
           </StyledList>
         </div>
         <div>
@@ -79,6 +80,10 @@ export const ToKnow = () => {
           </StyledList>
         </div>
       </StyledFlexContainer>
+      <p>
+        Taxi numbers for getting around: Apostolos 0357 96486356, John 0357 99395511.
+        Mention you are here for Eleni&apos;s wedding.
+      </p>
     </Wrapper>
   )
 }

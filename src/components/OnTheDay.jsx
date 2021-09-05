@@ -33,12 +33,17 @@ export const OnTheDay = () => {
     <Wrapper>
       <h2>On the Big Day</h2>
       <StyledContent>
-        <p>Times TBC</p>
         <p>
-          All transport to the church and venue is arranged, and there will be a
-          shuttle back to the original pick up point at the end of the night
+          All transport to the church is arranged from the pick up point below at
+          14:45 and we will be providing transport from the church to the venue.
+          There will be a shuttle back to the original pick up point at various
+          points through the night, starting at 23:00.
         </p>
-        <p>Coaches will be picking up from the point below</p>
+        <p>
+          If you want to arrange your own transport, these are trusted taxi
+          companies: Apostolos 0357 96486356, John 0357 99395511. Mention you are
+          here for Eleni&apos;s wedding.
+        </p>
       </StyledContent>
 
       <StyledMapContainer data-testid="map-component">

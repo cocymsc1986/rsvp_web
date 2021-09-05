@@ -17,11 +17,12 @@ const StyledContent = styled.div`
 export const BeforeTheDay = () => {
   return (
     <Wrapper>
-      <h2>Before the Big Day</h2>
+      <h2>The night before the Big Day</h2>
       <StyledContent>
         <p>
-          The evening before the wedding, we plan to invite everyone to join us for
-          drinks and food at a time and place to be confirmed
+          The evening before the wedding there will be drinks and food at The Island
+          Boutique Hotel at 7pm. You can find the location{" "}
+          <a href="https://www.islandhotelcy.com/contact/">here</a>.
         </p>
       </StyledContent>
     </Wrapper>
