@@ -5,6 +5,6 @@ describe("BeforeTheDay component", () => {
   it("should render", () => {
     render(<BeforeTheDay />)
 
-    expect(screen.getByText("Before the Big Day")).toBeInTheDocument()
+    expect(screen.getByText("The Night Before the Big Day")).toBeInTheDocument()
   })
 })

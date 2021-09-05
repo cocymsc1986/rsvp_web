@@ -5,6 +5,6 @@ describe("TravelInfo component", () => {
   it("should render", () => {
     render(<TravelInfo />)
 
-    expect(screen.getByText("Travel Information")).toBeInTheDocument()
+    expect(screen.getByText("Travel Information (COVID)")).toBeInTheDocument()
   })
 })

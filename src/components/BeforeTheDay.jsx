@@ -17,7 +17,7 @@ const StyledContent = styled.div`
 export const BeforeTheDay = () => {
   return (
     <Wrapper>
-      <h2>The night before the Big Day</h2>
+      <h2>The Night Before the Big Day</h2>
       <StyledContent>
         <p>
           The evening before the wedding there will be drinks and food at The Island
