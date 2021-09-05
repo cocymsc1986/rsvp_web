@@ -15,7 +15,7 @@ export const Header = () => {
       <header>
         <HeaderImage src={headerImg} alt="Michael &amp; Eleni wedding" />
       </header>
-      <Rsvp />
+      {/* <Rsvp /> */}
     </>
   )
 }
