@@ -33,9 +33,19 @@ export const TravelInfo = () => {
     <Wrapper>
       <h2>Travel Information (COVID)</h2>
       <StyledContent>
+        <h3>Update 26/9/21</h3>
         <p>
-          All this info is correct as of 5/9/21, we will try to update if anything
-          changes, but check the information at{" "}
+          There will be an announcement on October 4th to change the rules around
+          travelling back to England, check{" "}
+          <a href="https://www.gov.uk/guidance/red-amber-and-green-list-rules-for-entering-england#amber-list-rules">
+            gov.uk travel info for England
+          </a>{" "}
+          for more info.
+        </p>
+        <h3>Update 5/9/21</h3>
+        <p>
+          All the following info is correct as of 5/9/21, we will try to update if
+          anything changes, but check the information at{" "}
           <a href="https://www.gov.uk/guidance/red-amber-and-green-list-rules-for-entering-england#amber-list-rules">
             gov.uk travel info for England
           </a>
